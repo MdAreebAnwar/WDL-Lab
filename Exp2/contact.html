@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact &amp; Farmer Registration - AI Smart Irrigation</title>
+
+    <!-- Task 3: External CSS for Whole Website Theme -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Task 9: External CSS for Page Layout -->
+    <link rel="stylesheet" href="layout.css">
+
+    <!-- Task 8 Deliverable: Link form.css for form styling -->
+    <link rel="stylesheet" href="form.css">
+
+    <!-- Task 2: Internal Navigation Styles -->
+    <style>
+        nav.main-nav {
+            background-color: #1b5e20;
+            text-align: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #144617;
+        }
+
+        nav.main-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.main-nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav.main-nav ul li a {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav.main-nav ul li a:hover {
+            background-color: #2e7d32;
+            color: #fff37a;
+        }
+
+        nav.main-nav ul li a.active {
+            background-color: #0e3b13;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1: Header with Inline CSS -->
+    <header style="background-color: #136528; padding: 22px 15px; border-bottom: 3px solid #0d461b; text-align: center;">
+        <h1 style="color: #ffffff; font-size: 26px; font-weight: bold; margin: 0 0 6px 0; font-family: 'Segoe UI', Tahoma, sans-serif;">
+            AI-based Smart Irrigation Advisory System (KJS-AGR-01)
+        </h1>
+        <p style="color: #d4edda; font-style: italic; font-size: 15px; margin: 0; text-align: center;">
+            Smart Irrigation using AI &amp; Sensor Technology
+        </p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="farm_info.html">Farm Information</a></li>
+            <li><a href="sensor_data.html">Farm Dashboard</a></li>
+            <li><a href="advisory.html">Irrigation Advisory</a></li>
+            <li><a href="sensor_data.html">Sensor Data</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ====================================================================
+         Task 8: Registration & Advisory Query Form Styled with form.css
+         ==================================================================== -->
+    <main class="page-container">
+        
+        <div class="form-card">
+            <h2 class="card-title">Farmer Registration &amp; Advisory Query</h2>
+            <p style="margin-bottom: 20px; color: #555555;">
+                Register your sugarcane plot or connect with our agricultural advisory engineers:
+            </p>
+
+            <form action="#" method="post" onsubmit="event.preventDefault(); alert('Registration submitted successfully!');">
+                
+                <!-- Fieldset 1: Personal Information -->
+                <fieldset>
+                    <legend>Personal &amp; Contact Details</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="e.g., Ramesh Patil" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g., +91 98765 43210" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="e.g., ramesh.patil@agrimail.com">
+                    </div>
+                </fieldset>
+
+                <!-- Fieldset 2: Farm & Crop Details -->
+                <fieldset>
+                    <legend>Farm &amp; Sugarcane Crop Specifications</legend>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="plotId">Assigned Plot ID</label>
+                            <input type="text" id="plotId" name="plotId" placeholder="e.g., KJS-PLOT-104">
+                        </div>
+                        <div class="form-group">
+                            <label for="farmArea">Farm Area (in Acres)</label>
+                            <input type="number" id="farmArea" name="farmArea" min="0.5" step="0.1" placeholder="e.g., 3.5">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cropStage">Current Sugarcane Growth Stage</label>
+                            <select id="cropStage" name="cropStage">
+                                <option value="germination">Germination Stage (0 - 30 Days)</option>
+                                <option value="tillering">Tillering Stage (30 - 120 Days)</option>
+                                <option value="grand_growth" selected>Grand Growth Stage (120 - 270 Days)</option>
+                                <option value="maturity">Maturity Stage (270 - 360 Days)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="irrigationType">Irrigation Method Installed</label>
+                            <select id="irrigationType" name="irrigationType">
+                                <option value="subsurface_drip" selected>Sub-surface Drip System</option>
+                                <option value="surface_drip">Surface Drip Irrigation</option>
+                                <option value="sprinkler">Micro-sprinklers</option>
+                                <option value="furrow">Furrow / Flood Irrigation</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="queryNotes">Additional Advisory Request / Notes</label>
+                        <textarea id="queryNotes" name="queryNotes" rows="4" placeholder="Enter any specific water stress symptoms or sensor telemetry questions..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Form Action Buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Submit Registration</button>
+                    <button type="reset" class="btn-reset">Clear Form</button>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer>
+        <p>&copy; 2026 AI-based Smart Irrigation Advisory System (KJS-AGR-01). All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* ==========================================================================
+   EXPERIMENT 2: DESIGN WEB PORTAL USING CSS3
+   Task 3: External CSS for Whole Website Theme
+   ==========================================================================
+   Description: This external stylesheet defines the global theme, typography,
+   colors, card components, and common footer styles across the entire portal.
+   ========================================================================== */
+
+/* 1. Global Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Set body font family across all pages (Task 3 requirement) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Soft light background color for clean, professional look */
+    background-color: #edf4ee;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* 2. Common Heading Styles (Task 3 requirement) */
+h1, h2, h3, h4, h5, h6 {
+    color: #136528; /* Primary theme green color */
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e0e8e0;
+    padding-bottom: 8px;
+    margin-top: 5px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* 3. Text & Paragraph Styling */
+p {
+    margin-bottom: 12px;
+    color: #444444;
+}
+
+/* 4. Highlight Badges / Yellow Accents (as seen in lab reference images) */
+.highlight-yellow {
+    background-color: #fff37a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.highlight-green {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.highlight-red {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* 5. Reusable Card Styling (Task 4 & Task 5: CSS Box Model) */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+    color: #136528;
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2ece3;
+    padding-bottom: 8px;
+}
+
+/* 6. List Styling inside Cards */
+.custom-list {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+/* 7. Common Footer Style (Task 3 requirement) */
+footer {
+    background-color: #136528;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 10px;
+    font-size: 0.95rem;
+    margin-top: 40px;
+    width: 100%;
+}
+
+footer p {
+    color: #ffffff;
+    margin-bottom: 0;
+}

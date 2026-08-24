@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data & Rates - AI-based Smart Irrigation System</title>
+
+    <!-- Task 3: External CSS for Whole Website Theme -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Task 9: External CSS for Page Layout -->
+    <link rel="stylesheet" href="layout.css">
+
+    <!-- Task 7 Deliverable: Link table.css to the corresponding HTML file -->
+    <link rel="stylesheet" href="table.css">
+
+    <!-- Task 2: Internal Navigation Styles -->
+    <style>
+        nav.main-nav {
+            background-color: #1b5e20;
+            text-align: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #144617;
+        }
+
+        nav.main-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.main-nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav.main-nav ul li a {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav.main-nav ul li a:hover {
+            background-color: #2e7d32;
+            color: #fff37a;
+        }
+
+        nav.main-nav ul li a.active {
+            background-color: #0e3b13;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1: Header with Inline CSS -->
+    <header style="background-color: #136528; padding: 22px 15px; border-bottom: 3px solid #0d461b; text-align: center;">
+        <h1 style="color: #ffffff; font-size: 26px; font-weight: bold; margin: 0 0 6px 0; font-family: 'Segoe UI', Tahoma, sans-serif;">
+            AI-based Smart Irrigation Advisory System (KJS-AGR-01)
+        </h1>
+        <p style="color: #d4edda; font-style: italic; font-size: 15px; margin: 0; text-align: center;">
+            Smart Irrigation using AI &amp; Sensor Technology
+        </p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="farm_info.html">Farm Information</a></li>
+            <li><a href="sensor_data.html" class="active">Farm Dashboard</a></li>
+            <li><a href="advisory.html">Irrigation Advisory</a></li>
+            <li><a href="sensor_data.html" class="active">Sensor Data</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="page-container">
+        
+        <!-- Table 1: Live Field Sensor Readings (Styled with table.css) -->
+        <section class="card">
+            <h2 class="card-title">Live Field Sensor Readings (Plot KJS-104)</h2>
+            <p>
+                Real-time telemetry gathered across the active sugarcane monitoring zones:
+            </p>
+
+            <div class="table-container">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Sensor ID</th>
+                            <th>Sensor Parameter</th>
+                            <th>Current Value</th>
+                            <th>Ideal Threshold</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SNS-SM-01</td>
+                            <td>Soil Moisture (Root Depth 30cm)</td>
+                            <td>22.4% VWC</td>
+                            <td>32.0% - 38.0%</td>
+                            <td><span class="status-warning">Under-watered</span></td>
+                        </tr>
+                        <tr>
+                            <td>SNS-SM-02</td>
+                            <td>Soil Moisture (Sub-surface 60cm)</td>
+                            <td>24.1% VWC</td>
+                            <td>35.0% - 40.0%</td>
+                            <td><span class="status-warning">Low</span></td>
+                        </tr>
+                        <tr>
+                            <td>SNS-TMP-01</td>
+                            <td>Ambient Field Temperature</td>
+                            <td>31.5 °C</td>
+                            <td>25.0°C - 35.0°C</td>
+                            <td><span class="status-optimal">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td>SNS-HUM-01</td>
+                            <td>Relative Air Humidity</td>
+                            <td>68 % RH</td>
+                            <td>60% - 80%</td>
+                            <td><span class="status-optimal">Optimal</span></td>
+                        </tr>
+                        <tr>
+                            <td>SNS-RAIN-01</td>
+                            <td>Precipitation Gauge</td>
+                            <td>0.0 mm/hr</td>
+                            <td>-</td>
+                            <td><span class="status-active">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Table 2: Task 7 - Price List for Smart Irrigation Components & Services -->
+        <section class="card">
+            <h2 class="card-title">Price List: Smart Irrigation Equipment &amp; Drip Subscriptions</h2>
+            <p>
+                Standard rate card for farm telemetry units and automated valve kits:
+            </p>
+
+            <div class="table-container">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Item Code</th>
+                            <th>Component / Advisory Service</th>
+                            <th>Coverage Area</th>
+                            <th>Unit Rate (INR)</th>
+                            <th>Annual Maintenance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EQ-FDR-01</td>
+                            <td>Multi-depth Capacitive Soil Probe</td>
+                            <td>1 Acre Root Zone</td>
+                            <td>₹ 4,500</td>
+                            <td>₹ 500 / year</td>
+                        </tr>
+                        <tr>
+                            <td>EQ-WTH-02</td>
+                            <td>Solar-Powered IoT Weather Micro-station</td>
+                            <td>5 Acres Farm</td>
+                            <td>₹ 12,800</td>
+                            <td>₹ 1,200 / year</td>
+                        </tr>
+                        <tr>
+                            <td>EQ-VAL-03</td>
+                            <td>Wireless Automated Solenoid Drip Valve</td>
+                            <td>Per Valve Line</td>
+                            <td>₹ 3,200</td>
+                            <td>₹ 350 / year</td>
+                        </tr>
+                        <tr>
+                            <td>SRV-AI-ADV</td>
+                            <td>AI Sugarcane Crop Advisory Subscription</td>
+                            <td>Unlimited Plots</td>
+                            <td>₹ 1,500 / season</td>
+                            <td>Included</td>
+                        </tr>
+                        <tr>
+                            <td>EQ-GW-05</td>
+                            <td>LoRaWAN Agricultural Gateway Hub</td>
+                            <td>10 km Radius</td>
+                            <td>₹ 18,000</td>
+                            <td>₹ 1,500 / year</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer>
+        <p>&copy; 2026 AI-based Smart Irrigation Advisory System (KJS-AGR-01). All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

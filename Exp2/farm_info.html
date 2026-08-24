@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Information - AI-based Smart Irrigation System</title>
+
+    <!-- Task 3: External CSS for Whole Website Theme -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Task 9: External CSS for Page Layout -->
+    <link rel="stylesheet" href="layout.css">
+
+    <!-- Task 2: Internal CSS for Navigation & Task 6 Image Gallery Styling -->
+    <style>
+        /* Task 2: Internal CSS for Navigation Bar */
+        nav.main-nav {
+            background-color: #1b5e20;
+            text-align: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #144617;
+        }
+
+        nav.main-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.main-nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav.main-nav ul li a {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav.main-nav ul li a:hover {
+            background-color: #2e7d32;
+            color: #fff37a;
+        }
+
+        nav.main-nav ul li a.active {
+            background-color: #0e3b13;
+            color: #ffffff;
+        }
+
+        /* ====================================================================
+           Task 6: Image Gallery / Feature Cards Styling with CSS
+           Requirements:
+           - Same size for images/cards
+           - Add border and hover zoom effect
+           - Add spacing between items
+           - Use: transition, transform: scale()
+           ==================================================================== */
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(25% - 15px);
+            min-width: 160px;
+            background-color: #f7faf7;
+            border: 2px solid #c8dcc8;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            /* Task 6 requirement: transition and transform */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Task 6 requirement: hover zoom effect with transform: scale() */
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 14px rgba(19, 101, 40, 0.2);
+            border-color: #136528;
+            background-color: #ffffff;
+        }
+
+        .gallery-icon {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .gallery-item h4 {
+            color: #136528;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .gallery-item p {
+            font-size: 0.82rem;
+            color: #555555;
+            margin-bottom: 0;
+        }
+
+        /* Sub-sections inside cards */
+        .stage-box {
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #d5e5d5;
+        }
+
+        .stage-box:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .stage-title {
+            font-weight: bold;
+            color: #136528;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1: Header styled with inline CSS -->
+    <header style="background-color: #136528; padding: 22px 15px; border-bottom: 3px solid #0d461b; text-align: center;">
+        <h1 style="color: #ffffff; font-size: 26px; font-weight: bold; margin: 0 0 6px 0; font-family: 'Segoe UI', Tahoma, sans-serif;">
+            AI-based Smart Irrigation Advisory System (KJS-AGR-01)
+        </h1>
+        <p style="color: #d4edda; font-style: italic; font-size: 15px; margin: 0; text-align: center;">
+            Smart Irrigation using AI &amp; Sensor Technology
+        </p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="farm_info.html" class="active">Farm Information</a></li>
+            <li><a href="sensor_data.html">Farm Dashboard</a></li>
+            <li><a href="advisory.html">Irrigation Advisory</a></li>
+            <li><a href="sensor_data.html">Sensor Data</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="page-container">
+        
+        <!-- ====================================================================
+             Task 5: Card 1 - Irrigation Workflow Steps (CSS Box Model)
+             ==================================================================== -->
+        <section class="card">
+            <h2 class="card-title">Irrigation Workflow Steps</h2>
+            <p>
+                The system follows an automated <strong>sequential workflow</strong> to ensure precise water management for sugarcane fields:
+            </p>
+            
+            <ol class="custom-list" style="line-height: 1.8;">
+                <li><strong>Real-Time Field Data Collection:</strong> IoT field sensors continuously measure ground conditions.</li>
+                <li><strong>Data Transmission:</strong> Collected values are sent wirelessly to the central agricultural cloud database.</li>
+                <li><strong>AI Analysis &amp; Modeling:</strong> AI algorithms compute soil water deficits based on crop stage and weather inputs.</li>
+                <li><strong>Advisory Generation:</strong> System flags fields needing water with <span class="highlight-yellow">HIGH</span>, <span class="highlight-yellow">MEDIUM</span>, or <span class="highlight-yellow">LOW</span> priority levels.</li>
+                <li><strong>Automated Action / Alert:</strong> Farmers receive push notifications or auto-drip valves trigger for controlled watering.</li>
+            </ol>
+        </section>
+
+        <!-- ====================================================================
+             Task 5 & 6: Card 2 - Sensors Used in the System with Interactive Gallery
+             ==================================================================== -->
+        <section class="card">
+            <h2 class="card-title">Sensors Used in the System</h2>
+            <p>
+                Our field deployment utilizes standard high-precision sensor units across the sugarcane farm:
+            </p>
+            
+            <ul class="custom-list">
+                <li><strong>Soil Moisture Sensor:</strong> Measures volumetric water content in soil around root zones.</li>
+                <li><strong>Temperature Sensor:</strong> Tracks ambient field temperature to calculate potential evapotranspiration rates.</li>
+                <li><strong>Humidity Sensor:</strong> Monitors relative atmospheric humidity to assess microclimate stress.</li>
+                <li><strong>Rainfall Sensor:</strong> Detects live precipitation to automatically override scheduled watering events.</li>
+            </ul>
+
+            <!-- Task 6: Visual Interactive Sensor Grid with Hover Zoom Effect -->
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <span class="gallery-icon">💧</span>
+                    <h4>Soil Moisture</h4>
+                    <p>FDR Probe (0-100% VWC)</p>
+                </div>
+                <div class="gallery-item">
+                    <span class="gallery-icon">🌡️</span>
+                    <h4>Temperature</h4>
+                    <p>RTD Ambient (-10 to 60°C)</p>
+                </div>
+                <div class="gallery-item">
+                    <span class="gallery-icon">💨</span>
+                    <h4>Humidity</h4>
+                    <p>Capacitive RH Sensor</p>
+                </div>
+                <div class="gallery-item">
+                    <span class="gallery-icon">🌧️</span>
+                    <h4>Rainfall Gauge</h4>
+                    <p>Tipping Bucket 0.2mm</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             Task 5: Card 3 - Sugarcane Crop Stages & Water Needs
+             ==================================================================== -->
+        <section class="card">
+            <h2 class="card-title">Sugarcane Crop Stages &amp; Water Needs</h2>
+            <p>
+                Water requirements vary significantly across different phases of sugarcane growth. Below is a detailed breakdown:
+            </p>
+
+            <div class="stage-box">
+                <div class="stage-title">Germination Stage (0 to 30 Days)</div>
+                <p>
+                    This phase involves seed cane sprouting and root initiation. It requires <span class="highlight-yellow">light but frequent irrigation</span> to keep soil moist without drowning young roots.
+                </p>
+            </div>
+
+            <div class="stage-box">
+                <div class="stage-title">Tillering Stage (30 to 120 Days)</div>
+                <p>
+                    Shoots multiply rapidly. Water stress during this phase reduces total stalk count, so maintaining <span class="highlight-yellow">consistent adequate moisture</span> is vital.
+                </p>
+            </div>
+
+            <div class="stage-box">
+                <div class="stage-title">Grand Growth Stage (120 to 270 Days)</div>
+                <p>
+                    This is the <span class="highlight-yellow">most critical water consumption phase</span> where cane height and girth build up. Requires <span class="highlight-yellow">maximum irrigation depth</span> for optimal biomass yield.
+                </p>
+            </div>
+
+            <div class="stage-box">
+                <div class="stage-title">Maturity Stage (270 to 360 Days)</div>
+                <p>
+                    Sucrose accumulates in the stalks. Irrigation is intentionally <span class="highlight-yellow">tapered off and withheld</span> 15-30 days before harvest to maximize sugar density.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer>
+        <p>&copy; 2026 AI-based Smart Irrigation Advisory System (KJS-AGR-01). All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Advisory - AI-based Smart Irrigation System</title>
+
+    <!-- Task 3: External CSS for Whole Website Theme -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Task 9: External CSS for Layout -->
+    <link rel="stylesheet" href="layout.css">
+
+    <!-- Task 2: Internal CSS for Navigation & Advisory Card Styling -->
+    <style>
+        /* Task 2: Internal Navigation Styles */
+        nav.main-nav {
+            background-color: #1b5e20;
+            text-align: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #144617;
+        }
+
+        nav.main-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.main-nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav.main-nav ul li a {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav.main-nav ul li a:hover {
+            background-color: #2e7d32;
+            color: #fff37a;
+        }
+
+        nav.main-nav ul li a.active {
+            background-color: #0e3b13;
+            color: #ffffff;
+        }
+
+        /* Inner Report Card Styling (Task 5: CSS Box Model) */
+        .advisory-inner-card {
+            background-color: #fcfdfc;
+            border: 1px solid #d4e4d4;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .report-field {
+            margin-bottom: 12px;
+            font-size: 1.02rem;
+            color: #2c3e50;
+        }
+
+        .report-field strong {
+            color: #111111;
+            min-width: 260px;
+            display: inline-block;
+        }
+
+        .report-divider {
+            border: 0;
+            height: 1px;
+            background-color: #dce7dc;
+            margin: 20px 0;
+        }
+
+        .advisory-subheading {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #136528;
+            margin-bottom: 12px;
+        }
+
+        .footnote-text {
+            font-size: 0.85rem;
+            color: #666666;
+            margin-top: 15px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1: Header styled with inline CSS -->
+    <header style="background-color: #136528; padding: 22px 15px; border-bottom: 3px solid #0d461b; text-align: center;">
+        <h1 style="color: #ffffff; font-size: 26px; font-weight: bold; margin: 0 0 6px 0; font-family: 'Segoe UI', Tahoma, sans-serif;">
+            AI-based Smart Irrigation Advisory System (KJS-AGR-01)
+        </h1>
+        <p style="color: #d4edda; font-style: italic; font-size: 15px; margin: 0; text-align: center;">
+            Smart Irrigation using AI &amp; Sensor Technology
+        </p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="farm_info.html">Farm Information</a></li>
+            <li><a href="sensor_data.html">Farm Dashboard</a></li>
+            <li><a href="advisory.html" class="active">Irrigation Advisory</a></li>
+            <li><a href="sensor_data.html">Sensor Data</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="page-container" style="max-width: 950px;">
+        
+        <section class="card">
+            <h2 class="card-title">Daily Irrigation Recommendation Report</h2>
+            <p>
+                Below is today's real-time AI-generated irrigation advice tailored for registered sugarcane plot owners.
+            </p>
+            <p style="font-size: 0.9rem; color: #555555; margin-bottom: 15px;">
+                Generated on: <strong>August 10, 2026</strong> | Advisory Code: <strong>ADVISORY-SG-402</strong>
+            </p>
+
+            <!-- Inner Advisory Card (Matches Reference Image 4) -->
+            <div class="advisory-inner-card">
+                
+                <div class="report-field">
+                    <strong>Plot ID:</strong> <span>KJS-PLOT-104</span>
+                </div>
+
+                <div class="report-field">
+                    <strong>Farmer Name:</strong> <span>Ramesh Patil</span>
+                </div>
+
+                <div class="report-field">
+                    <strong>Soil Moisture Level:</strong> <span>22% VWC (<em>Volumetric Water Content</em>)</span>
+                </div>
+
+                <div class="report-field">
+                    <strong>Water Stress Level:</strong> <span class="highlight-yellow">HIGH STRESS (Dry Root Zone)</span>
+                </div>
+
+                <div class="report-field">
+                    <strong>Recommended Irrigation Duration:</strong> <span class="highlight-yellow">45 Minutes</span> <span>(via <em>Sub-surface Drip</em>)</span>
+                </div>
+
+                <hr class="report-divider">
+
+                <div class="advisory-subheading">AI Advisory Summary &amp; Action Notes</div>
+                <p style="color: #333333; line-height: 1.6;">
+                    Current root zone moisture is below the target <strong>35% operational threshold</strong> for the current <em>Grand Growth Stage</em>. It is recommended to apply irrigation during early morning hours to minimize surface evaporation.
+                </p>
+
+                <p class="footnote-text">
+                    * Note: Recommendations are calculated using live soil matric potential, ambient temperature forecasts, and crop coefficient (Kc = 1.25). Advisory automatically updates every 6 hours.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer>
+        <p>&copy; 2026 AI-based Smart Irrigation Advisory System (KJS-AGR-01). All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

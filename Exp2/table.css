@@ -1,0 +1,90 @@
+/* ==========================================================================
+   EXPERIMENT 2: DESIGN WEB PORTAL USING CSS3
+   Task 7: Table Styling for Price List & Sensor Thresholds
+   ==========================================================================
+   Description: This stylesheet provides clean styling for data tables,
+   incorporating border-collapse, zebra-striping with nth-child(even),
+   header theming, hover effects, and text alignment.
+   ========================================================================== */
+
+/* 1. Table Wrapper Container */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+/* 2. Main Table Styling (Task 7 requirement: border-collapse) */
+table.custom-table {
+    width: 100%;
+    border-collapse: collapse; /* Merges adjacent cell borders into a single border */
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    border: 1px solid #d0ded0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 3. Table Header Styling (Task 7 requirement: header background color) */
+table.custom-table th {
+    background-color: #136528; /* Primary theme green */
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 14px;
+    text-align: center; /* Task 7 requirement: Center align text */
+    border: 1px solid #0f5220;
+    letter-spacing: 0.5px;
+}
+
+/* 4. Table Body Cell Styling */
+table.custom-table td {
+    padding: 11px 14px;
+    border: 1px solid #e0e8e0;
+    text-align: center; /* Task 7 requirement: Center align text */
+    color: #333333;
+}
+
+/* 5. Zebra-Striping Rows (Task 7 requirement: nth-child(even)) */
+table.custom-table tbody tr:nth-child(even) {
+    background-color: #f7faf7; /* Alternating soft green-gray tint */
+}
+
+table.custom-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* 6. Interactive Row Hover Effect */
+table.custom-table tbody tr:hover {
+    background-color: #e9f5e9;
+    transition: background-color 0.2s ease;
+}
+
+/* 7. Status Badges within Table */
+.status-active {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status-warning {
+    background-color: #ffc107;
+    color: #333333;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status-optimal {
+    background-color: #17a2b8;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+}

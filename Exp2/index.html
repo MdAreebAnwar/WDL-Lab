@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-based Smart Irrigation Advisory System (KJS-AGR-01)</title>
+
+    <!-- Task 3: External CSS for Whole Website Theme -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Task 9: External CSS for Page Layout (Header, Sidebar, Content, Footer) -->
+    <link rel="stylesheet" href="layout.css">
+
+    <!-- ====================================================================
+         Task 2: Internal CSS for Navigation Menu (<style> in <head>)
+         Concepts tested: Internal CSS, selectors, pseudo-class (:hover),
+         text-decoration, display: inline-block.
+         ==================================================================== -->
+    <style>
+        /* Styling the navigation container */
+        nav.main-nav {
+            background-color: #1b5e20; /* Darker green bar for nav */
+            text-align: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #144617;
+        }
+
+        /* Task 2: Remove bullet points */
+        nav.main-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Task 2: Display menu items horizontally using display: inline-block */
+        nav.main-nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        /* Task 2: Change link colors & text-decoration */
+        nav.main-nav ul li a {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Task 2: Add hover effect (:hover pseudo-class) */
+        nav.main-nav ul li a:hover {
+            background-color: #2e7d32;
+            color: #fff37a;
+            text-decoration: none;
+        }
+
+        /* Active navigation link */
+        nav.main-nav ul li a.active {
+            background-color: #0e3b13;
+            color: #ffffff;
+        }
+
+        /* ====================================================================
+           Task 10: CSS Effects & Highlighting (@keyframes, box-shadow, text-shadow)
+           ==================================================================== */
+        @keyframes glowPulse {
+            0% {
+                box-shadow: 0 0 5px rgba(46, 125, 50, 0.4);
+                border-color: #2e7d32;
+            }
+            50% {
+                box-shadow: 0 0 16px rgba(46, 125, 50, 0.85);
+                border-color: #1b5e20;
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(46, 125, 50, 0.4);
+                border-color: #2e7d32;
+            }
+        }
+
+        .highlight-box {
+            background-color: #e8f5e9; /* Different background color */
+            border-left: 6px solid #1e7e34;
+            border-radius: 6px;
+            padding: 20px 22px;
+            margin-top: 25px;
+            animation: glowPulse 3s infinite ease-in-out; /* @keyframes animation */
+            transition: transform 0.2s ease;
+        }
+
+        .highlight-box:hover {
+            transform: scale(1.01);
+        }
+
+        .highlight-box h3 {
+            color: #136528;
+            font-size: 1.25rem; /* Bigger font */
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* text-shadow */
+        }
+
+        .highlight-box p {
+            font-size: 1rem;
+            color: #2e4a30;
+            margin-bottom: 0;
+            line-height: 1.55;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====================================================================
+         Task 1: Style the Homepage Header (Inline CSS)
+         Requirements:
+         - Use inline CSS to:
+           * Set background color for header
+           * Change text color of title
+           * Center align slogan
+           * Add padding and border
+         - Apply inline style to: <h1>, <p>, <header>
+         ==================================================================== -->
+    <header style="background-color: #136528; padding: 22px 15px; border-bottom: 3px solid #0d461b; text-align: center;">
+        <h1 style="color: #ffffff; font-size: 26px; font-weight: bold; margin: 0 0 6px 0; font-family: 'Segoe UI', Tahoma, sans-serif;">
+            AI-based Smart Irrigation Advisory System (KJS-AGR-01)
+        </h1>
+        <p style="color: #d4edda; font-style: italic; font-size: 15px; margin: 0; text-align: center;">
+            Smart Irrigation using AI &amp; Sensor Technology
+        </p>
+    </header>
+
+    <!-- Navigation Menu styled using Task 2 Internal CSS -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="farm_info.html">Farm Information</a></li>
+            <li><a href="sensor_data.html">Farm Dashboard</a></li>
+            <li><a href="advisory.html">Irrigation Advisory</a></li>
+            <li><a href="sensor_data.html">Sensor Data</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ====================================================================
+         Task 9: Page Layout Using CSS (Header, Sidebar, Content, Footer)
+         ==================================================================== -->
+    <main class="page-container">
+        <div class="layout-wrapper">
+            
+            <!-- Left Main Content Area -->
+            <section class="content-area">
+                <h2>Welcome to Sugarcane Smart Irrigation Portal</h2>
+                <p>
+                    The <strong>KJS-AGR-01 System</strong> provides real-time, data-driven irrigation advice designed specifically for sugarcane farming. By combining IoT soil sensors, localized weather forecasting, and AI analysis, our goal is to optimize water usage, enhance crop yield, and prevent both underwatering and waterlogging.
+                </p>
+
+                <!-- Task 10: Highlighted Feature Alert Box -->
+                <div class="highlight-box">
+                    <h3>Featured System Highlight: Stage-Based Water Management</h3>
+                    <p>
+                        Sugarcane requires varying water levels across its germination, tillering, grand growth, and maturity stages. Our AI engine automatically adjusts daily irrigation recommendations based on crop age and current soil moisture readings.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Task 4 & Task 9: Right Sidebar (Quick System Alerts Card) -->
+            <aside class="sidebar">
+                <h3>Quick System Alerts</h3>
+                
+                <div class="sidebar-item">
+                    <strong>Region:</strong>
+                    <span>Zone 4 - Sugarcane Belt</span>
+                </div>
+
+                <div class="sidebar-item">
+                    <strong>System Status:</strong>
+                    <span>Active &amp; Monitoring</span>
+                </div>
+
+                <div class="sidebar-item">
+                    <strong>Next Scheduled Advisory:</strong>
+                    <span>Today at 04:00 PM</span>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Task 3: Common Footer Style -->
+    <footer>
+        <p>&copy; 2026 AI-based Smart Irrigation Advisory System (KJS-AGR-01). All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

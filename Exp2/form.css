@@ -1,0 +1,134 @@
+/* ==========================================================================
+   EXPERIMENT 2: DESIGN WEB PORTAL USING CSS3
+   Task 8: Style Registration Form
+   ==========================================================================
+   Description: This stylesheet provides form styling for farmer registration
+   and advisory request submissions, covering fieldset, legend, input styling,
+   focus states, hover transitions, and rounded corners.
+   ========================================================================== */
+
+/* 1. Form Container */
+.form-card {
+    background-color: #ffffff;
+    border: 1px solid #d8e2d8;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    max-width: 750px;
+    margin: 20px auto;
+}
+
+/* 2. Fieldset & Legend Styling (Task 8 requirement) */
+fieldset {
+    border: 1.5px solid #136528;
+    border-radius: 8px; /* Task 8 requirement: border-radius */
+    padding: 22px 25px;
+    margin-bottom: 25px;
+    background-color: #fafdfa;
+}
+
+legend {
+    color: #136528;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 10px;
+}
+
+/* 3. Form Group Layout */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+/* 4. Input Boxes, Select, and Textarea (Task 8 requirement: width, padding, border-radius) */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Task 8 requirement: input boxes width */
+    padding: 10px 14px; /* Task 8 requirement: padding */
+    border: 1.5px solid #cccccc;
+    border-radius: 6px; /* Task 8 requirement: border-radius */
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #333333;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* 5. Input Focus Effect (Task 8 requirement: :focus) */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #136528;
+    box-shadow: 0 0 6px rgba(19, 101, 40, 0.35);
+    background-color: #fafffa;
+}
+
+/* 6. Form Row (for 2 inputs side by side) */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* 7. Buttons Styling (Task 8 requirement: Submit button color and hover effect) */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-submit {
+    background-color: #136528; /* Primary green color */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px; /* Task 8 requirement: border-radius */
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Task 8 requirement: :hover on submit button */
+.btn-submit:hover {
+    background-color: #0d461b;
+    transform: translateY(-1px);
+}
+
+.btn-reset {
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reset:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
