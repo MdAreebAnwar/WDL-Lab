@@ -13,10 +13,4 @@ This repository contains lab assignments and experiments for the **Web Developme
 
 ---
 
-## 🚀 Getting Started
-To view any experiment locally:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<YOUR_GITHUB_USERNAME>/wdl.git
-   ```
-2. Navigate to the experiment folder (e.g. `Exp2/`) and open `index.html` in your browser.
+
